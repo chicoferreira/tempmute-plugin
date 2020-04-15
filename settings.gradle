@@ -1,0 +1,4 @@
+rootProject.name = 'tempmute-plugin'
+include 'tempmute-api'
+include 'tempmute-bukkit'
+

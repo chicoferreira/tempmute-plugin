@@ -1,0 +1,4 @@
+name: TempmutePlugin
+version: ${version}
+main: "com.github.chicoferreira.tempmute.bukkit.plugin.BukkitTempmutePlugin"
+author: chicoferreira
