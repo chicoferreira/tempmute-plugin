@@ -10,4 +10,7 @@ public class Constants {
     public static final String COMMAND_UNMUTE_WRONG_USAGE = "&cPlease use /unmute <user>";
     public static final String COMMAND_UNMUTE_TARGET_NOT_MUTED = "&c<target> is not muted.";
     public static final String COMMAND_UNMUTE_SUCCESS = "&aUnmuted &f<target>&a.";
+
+    public static final String COMMAND_ONLY_PLAYERS = "Only players can execute that command.";
+
 }

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class UserServiceImpl implements UserService {
+public abstract class AbstractUserService implements UserService {
 
     private final Map<String, User> userNameMap = new HashMap<>();
     private final Map<UUID, User> userUuidMap = new HashMap<>();
@@ -28,7 +28,9 @@ public class UserServiceImpl implements UserService {
         return userEntityMap.get(entity);
     }
 
-    public void create(User user) {
+    public abstract <E> User<E> createFor(E entity);
+
+    private void put(User user) {
         userNameMap.put(user.getName(), user);
         userUuidMap.put(user.getUUID(), user);
         userEntityMap.put(user.getEntity(), user);

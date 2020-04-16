@@ -1,21 +1,21 @@
 package com.github.chicoferreira.tempmute.commons.plugin;
 
 import com.github.chicoferreira.tempmute.TempmutePlugin;
-import com.github.chicoferreira.tempmute.mute.MuteService;
-import com.github.chicoferreira.tempmute.user.UserService;
+import com.github.chicoferreira.tempmute.commons.mute.MuteServiceImpl;
+import com.github.chicoferreira.tempmute.commons.user.AbstractUserService;
 
 public class TempmutePluginImpl implements TempmutePlugin {
 
-    MuteService muteService;
-    UserService userService;
+    MuteServiceImpl muteService;
+    AbstractUserService userService;
 
     @Override
-    public MuteService getMuteService() {
+    public MuteServiceImpl getMuteService() {
         return muteService;
     }
 
     @Override
-    public UserService getUserService() {
+    public AbstractUserService getUserService() {
         return userService;
     }
 
