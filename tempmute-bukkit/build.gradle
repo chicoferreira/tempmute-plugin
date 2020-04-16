@@ -1,5 +1,6 @@
 dependencies {
-    compile project(path: ':tempmute-api', configuration: 'shadow')
+    implementation project(path: ':tempmute-api', configuration: 'shadow')
+    implementation project(path: ':tempmute-commons', configuration: 'shadow')
     implementation('org.spigotmc:spigot-api:1.15.2-R0.1-SNAPSHOT')
 }
 
@@ -13,5 +14,6 @@ shadowJar {
 
     dependencies {
         include(dependency(':tempmute-api'))
+        include(dependency(':tempmute-commons'))
     }
 }
