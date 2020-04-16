@@ -18,4 +18,5 @@ public class TempmutePluginImpl implements TempmutePlugin {
     public UserService getUserService() {
         return userService;
     }
+
 }

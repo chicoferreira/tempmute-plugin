@@ -10,4 +10,6 @@ public interface User<E> {
 
     UUID getUUID();
 
+    void sendMessage(String message);
+
 }

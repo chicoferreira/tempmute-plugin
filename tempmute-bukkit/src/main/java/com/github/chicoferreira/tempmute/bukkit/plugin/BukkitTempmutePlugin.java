@@ -1,15 +1,15 @@
 package com.github.chicoferreira.tempmute.bukkit.plugin;
 
-import com.github.chicoferreira.tempmute.TempmutePlugin;
+import com.github.chicoferreira.tempmute.plugin.TempmutePluginBootstrap;
 import org.bukkit.plugin.java.JavaPlugin;
-import com.github.chicoferreira.tempmute.commons.TempmutePluginImpl;
 
 public class BukkitTempmutePlugin extends JavaPlugin {
 
-    private TempmutePlugin plugin;
+    private TempmutePluginBootstrap bootstrap;
 
     @Override
     public void onEnable() {
-        plugin = new TempmutePluginImpl();
+        bootstrap = new BukkitTempmutePluginBootstrap(this, bootstrap.getPlugin());
+        bootstrap.enable();
     }
 }
